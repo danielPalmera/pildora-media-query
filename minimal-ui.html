@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Minimal UI</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            transition: background .3s;
+        }
+
+        @media (display-mode: minimal-ui) {
+            body {
+                background: #fff3bf;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>display-mode: minimal-ui</h1>
+    <p>Similar a standalone pero con navegación mínima (atrás/recargar).</p>
+    <p>También requiere instalación PWA; algunos navegadores ya no soportan explicitamente este modo.</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Fullscreen</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            transition: background .3s;
+        }
+
+        @media (display-mode: fullscreen) {
+            body {
+                background: #ffe3e3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>display-mode: fullscreen</h1>
+    <p>Este modo ocupa toda la pantalla, sin barras de estado ni navegador.</p>
+    <p>Usa `window.open` con opciones o instala como PWA y lanza en pantalla completa para probar.</p>
+</body>
+</html>
