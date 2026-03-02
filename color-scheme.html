@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Media Queries</title>
+    <style>
+        /* base layout */
+        html, body {
+            max-width: 1440px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+
+        }
+        body{
+            background-color: aqua;
+        }
+        section {
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .img-landscape{
+            display: block;
+        }
+        .img-portrait{
+            display: none;
+        }
+        button{
+            height: 45px;
+            width: 90px;
+        }
+        
+        @media (prefers-color-scheme:dark) {
+            h1,p{
+                color: red;
+            }
+            body{
+                background-color: black;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Pruebas de Media Queries</h1>
+    <h2>prefers-color-scheme</h2>
+    <p> 
+        Revisar en modo oscuro y claro
+        en modo claro, el fondo es azul claro y las letras navegadores
+        en modo oscuro el fondo es negro y las letras rojas
+    </p>
+    <section>
+        <h2>dolor sit amet</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <img src="black_250x250.gif" alt="Imagen de prueba" class="img-landscape">
+        <button>Boton</button>
+    </section>
+
+</body>
+</html>
