@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Standalone</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            transition: background .3s;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            container-name: grilla;
+            container-type: inline-size;
+        }
+
+        .book {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        .book h2 {
+            font-size: 1.1rem;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .book .author {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .book p {
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        .book-target{
+            container-name: bookt;
+            container-type: inline-size;
+        }
+
+        @container bookt (max-width: 300px) {
+            .book h2{
+                color:red;
+            }
+        }
+
+        @container grilla (max-width: 767px) {
+            .book img {
+                display: none;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Grid de libros con Container Query</h1>
+
+    <div class="grid">
+        <!-- generar 16 cards -->
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Título Lorem</h2>
+            <div class="author">Autor Ipsum</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Libro Dolor</h2>
+            <div class="author">Autor Sit</div>
+            <p>Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Text Amet</h2>
+            <div class="author">Autor Consectetur</div>
+            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+        </div>
+        <div class="book book-target">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Magna Lorem</h2>
+            <div class="author">Autor Adipiscing</div>
+            <p>Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Title Ipsum</h2>
+            <div class="author">Author Elit</div>
+            <p>Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Libro Volutpat</h2>
+            <div class="author">Autor Nulla</div>
+            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Consectetur Amet</h2>
+            <div class="author">Autor Egna</div>
+            <p>Nunc feugiat mi a tellus consequat imperdiet.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Elementum Diam</h2>
+            <div class="author">Autor Pellentesque</div>
+            <p>Vestibulum sapien. Proin quam. Etiam ultrices.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Mauris Massa</h2>
+            <div class="author">Autor Fusce</div>
+            <p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Vestibulum Lacinia</h2>
+            <div class="author">Autor Lorem</div>
+            <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Proin Quam</h2>
+            <div class="author">Autor Mauris</div>
+            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Etiam Ultrices</h2>
+            <div class="author">Autor Venenatis</div>
+            <p>Curabitur sit amet mauris morbi in dui quis est pulvinar ullamcorper.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Mauris Massa</h2>
+            <div class="author">Autor Tortor</div>
+            <p>Nulla facilisi. Integer lacinia sollicitudin massa.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Vestibulum Sapien</h2>
+            <div class="author">Autor Est</div>
+            <p>Cras metus. Sed aliquet risus a tortor.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Proin Quam</h2>
+            <div class="author">Autor Ultrices</div>
+            <p>Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique.</p>
+        </div>
+        <div class="book">
+            <img src="black_250x250.gif" alt="Portada">
+            <h2>Curabitur Sit</h2>
+            <div class="author">Autor Mauris</div>
+            <p>Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit.</p>
+        </div>
+    </div>
+</body>
+</html>
